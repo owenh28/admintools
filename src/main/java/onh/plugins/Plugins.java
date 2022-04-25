@@ -16,5 +16,6 @@ public final class Plugins extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+        getLogger().info("Goodbye, see everyone next time...");
     }
 }
