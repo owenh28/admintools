@@ -4,3 +4,22 @@ main: onh.plugins.Plugins
 api-version: 1.18
 authors: [ owenh28 ]
 description: Minecraft/Paper version 1.18.1 ish
+permissions:
+  admintools.admin:
+    description: Allows all associated commands within plugin
+    default: op
+  admintools.beacon:
+    description: Allows beacon comand, /b /beacon, etc.
+    default: not op
+commands:
+  adminfo:
+    description: State the plugin info
+    permission: admintools.admin
+    permission-message: You do not have permission!
+    usage: /<command>
+  beacon:
+    description: Shoots firework from torso of player
+    permission: admintools.beacon
+    permission-message: You don't have permission to use this. If you believe this is an error, contact the server admin.
+    usage: /<command>
+
