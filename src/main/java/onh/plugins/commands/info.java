@@ -13,13 +13,12 @@ public class info implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         Player pSend = (Player) sender;
         Server server = pSend.getServer();
-        if(command.getName().equalsIgnoreCase("adminfo")){
             //this is all garbage and useless
-            pSend.sendMessage("Info:");
-            pSend.sendMessage("AdminTools version is:");
-            pSend.sendMessage(server.getName() + server.getWorlds());
-            return true;
-        }
-        return false;
+        pSend.sendMessage("Info:");
+        pSend.sendMessage("AdminTools version is:");
+        pSend.sendMessage(server.getName() + server.getWorlds());
+        return true;
+
+
     }
 }

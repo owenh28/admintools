@@ -18,19 +18,17 @@ public class beaconother implements CommandExecutor {
         Player sndPl = (Player) sender;
         Server server = sender.getServer();
         Player target = server.getPlayer(args[0]);
-        if(command.getName().equalsIgnoreCase("beaconother")){
-            //Build firework, same as beacon command but for a different player
-            assert target != null;
-            Firework fw = target.getWorld().spawn(target.getLocation(), Firework.class);
-            FireworkMeta fwm = fw.getFireworkMeta();
-            FireworkEffect effect = FireworkEffect.builder().with(FireworkEffect.Type.CREEPER).withColor(Color.MAROON).flicker(true).withFade(Color.FUCHSIA).build();
-            fwm.addEffects(effect);
-            fwm.setPower(5);
+        assert target != null;
+        Firework fw = target.getWorld().spawn(target.getLocation(), Firework.class);
+        FireworkMeta fwm = fw.getFireworkMeta();
+        FireworkEffect effect = FireworkEffect.builder().with(FireworkEffect.Type.CREEPER).withColor(Color.MAROON).flicker(true).withFade(Color.FUCHSIA).build();
+        fwm.addEffects(effect);
+        fwm.setPower(1);
             //Send firework
-            fw.setFireworkMeta(fwm);
-            sndPl.sendMessage("Player " + target.getName() + " has been shown.");
-            return true;
-        }
-        return false;
+        fw.setFireworkMeta(fwm);
+        sndPl.sendMessage("Player " + target.getName() + " has been shown.");
+        return true;
+
+
     }
 }

@@ -20,6 +20,8 @@ commands:
   beacon:
     description: Shoots firework from torso of player
     permission: admintools.beacon
+    aliases:
+      -b
     permission-message: You don't have permission to use this. If you believe this is an error, contact the server admin.
     usage: /<command>
   beaconother:
@@ -30,4 +32,8 @@ commands:
     permission: admintools.admin
     permission-message: You cannot do this
     usage: /<command> <player>
+  bitches:
+    description: mega L
+    permission: admintools.beacon
+    usage: /<command>
 

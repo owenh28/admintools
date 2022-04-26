@@ -19,10 +19,10 @@ public final class Plugins extends JavaPlugin {
         getLogger().info("GOOD MORNING VIETNAM!!!!");
         getLogger().info("Owen's AdminTools has loaded successfully!");
         //Register command executors for all commands
-        Objects.requireNonNull(this.getCommand("adminfo")).setExecutor(new info());
-        Objects.requireNonNull(this.getCommand("beacon")).setExecutor(new beacon());
-        Objects.requireNonNull(this.getCommand("beaconother")).setExecutor(new beaconother());
-        Objects.requireNonNull(this.getCommand("bitches")).setExecutor(new bitches());
+        this.getCommand("adminfo").setExecutor(new info());
+        this.getCommand("beacon").setExecutor(new beacon());
+        this.getCommand("beaconother").setExecutor(new beaconother());
+        this.getCommand("bitches").setExecutor(new bitches());
         //Single player sleep?
 
 //        Server srv = getServer();
