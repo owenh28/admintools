@@ -15,16 +15,20 @@ import java.util.Collections;
 public class beacon implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+        //Make new player from the command sender
         Player pSend = (Player) sender;
         if(command.getName().equalsIgnoreCase("beacon")){
+            //Build a firework from the player position and some preset values
+            //maybe add a firework customizer in the future
             Firework fw = pSend.getWorld().spawn(pSend.getLocation(), Firework.class);
             FireworkMeta fwm = fw.getFireworkMeta();
             FireworkEffect effect = FireworkEffect.builder().withColor(Color.AQUA).with(FireworkEffect.Type.CREEPER).withFade(Color.FUCHSIA).withFlicker().build();
             fwm.addEffects(effect);
             fwm.setPower(5);
+            //launch the firework
             fw.setFireworkMeta(fwm);
-
-
+            pSend.sendMessage("You have been revealed!");
+            return true;
         }
         return false;
     }

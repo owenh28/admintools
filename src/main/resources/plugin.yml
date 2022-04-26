@@ -22,4 +22,12 @@ commands:
     permission: admintools.beacon
     permission-message: You don't have permission to use this. If you believe this is an error, contact the server admin.
     usage: /<command>
+  beaconother:
+    description: Beacon command for others
+    aliases:
+      - bo
+      - bother
+    permission: admintools.admin
+    permission-message: You cannot do this
+    usage: /<command> <player>
 
