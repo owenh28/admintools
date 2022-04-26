@@ -2,7 +2,11 @@ package onh.plugins;
 
 import onh.plugins.commands.beacon;
 import onh.plugins.commands.beaconother;
+import onh.plugins.commands.bitches;
 import onh.plugins.commands.info;
+import org.bukkit.Server;
+import org.bukkit.World;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Objects;
@@ -18,6 +22,18 @@ public final class Plugins extends JavaPlugin {
         Objects.requireNonNull(this.getCommand("adminfo")).setExecutor(new info());
         Objects.requireNonNull(this.getCommand("beacon")).setExecutor(new beacon());
         Objects.requireNonNull(this.getCommand("beaconother")).setExecutor(new beaconother());
+        Objects.requireNonNull(this.getCommand("bitches")).setExecutor(new bitches());
+        //Single player sleep?
+
+//        Server srv = getServer();
+//        World wld = srv.getWorld("world");
+//        Player[] onlp = srv.getOnlinePlayers().toArray(new Player[0]);
+//        for(int i = 0; i < srv.getOnlinePlayers().size(); i++){
+//            if(onlp[i].isSleeping()){
+//                assert wld != null;
+//                wld.setTime(6000);
+//            }
+//        }
 
 
     }
