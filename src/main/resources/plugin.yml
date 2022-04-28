@@ -21,7 +21,7 @@ commands:
     description: Shoots firework from torso of player
     permission: admintools.beacon
     aliases:
-      -b
+      - b
     permission-message: You don't have permission to use this. If you believe this is an error, contact the server admin.
     usage: /<command>
   beaconother:
