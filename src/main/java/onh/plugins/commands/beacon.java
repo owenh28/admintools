@@ -11,8 +11,13 @@ import org.bukkit.inventory.meta.FireworkMeta;
 import org.jetbrains.annotations.NotNull;
 
 public class beacon implements CommandExecutor {
+
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+        if(!(sender instanceof Player)){
+            sender.sendMessage("This command may only be run by a player");
+            return false;
+        }
         //Make new player from the command sender
         Player pSend = (Player) sender;
         //Build a firework from the player position and some preset values
@@ -26,7 +31,5 @@ public class beacon implements CommandExecutor {
         fw.setFireworkMeta(fwm);
         pSend.sendMessage("You have been revealed!");
         return true;
-
-
     }
 }

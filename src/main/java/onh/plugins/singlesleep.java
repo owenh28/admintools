@@ -6,8 +6,10 @@ import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
 
 public class singlesleep implements Listener {
+
     @EventHandler
     public void onSleep(PlayerDeepSleepEvent event){
         Player sleepy = event.getPlayer();
@@ -20,6 +22,13 @@ public class singlesleep implements Listener {
             }
             world.setTime(6000);
             world.setClearWeatherDuration(400);
+        }
+    }
+    @EventHandler
+    public void onJoin(PlayerJoinEvent event){
+        Player joiner = event.getPlayer();
+        if(joiner.getName().equalsIgnoreCase("FastPizzaGuy")){
+            joiner.sendMessage("Hello father");
         }
     }
 }

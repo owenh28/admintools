@@ -12,6 +12,10 @@ public class bitches implements CommandExecutor {
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+        if(!(sender instanceof Player)){
+            sender.sendMessage("This command may only be run by a player");
+            return false;
+        }
         Player sndPl = (Player) sender;
         Server srv = sender.getServer();
         sndPl.setHealth(0);
@@ -19,14 +23,6 @@ public class bitches implements CommandExecutor {
         for(int i = 0; i < srv.getOnlinePlayers().size(); i++){
             onlines[i].sendMessage(sndPl.getName() + " has died due to no maidens... OOPS!");
         }
-//            Player gunnar = srv.getPlayer("Guno327");
-//            assert gunnar != null;
-//            if(gunnar.isOnline()){
-//                gunnar.setHealth(0);
-//
-//            }
         return true;
-
-
     }
 }
