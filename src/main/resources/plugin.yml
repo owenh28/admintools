@@ -36,4 +36,8 @@ commands:
     description: mega L
     permission: admintools.beacon
     usage: /<command>
+  launch:
+    description: Get yeeted
+    permission: admintools.beacon
+    usage: /<command>
 

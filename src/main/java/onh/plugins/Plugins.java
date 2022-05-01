@@ -1,9 +1,6 @@
 package onh.plugins;
 
-import onh.plugins.commands.beacon;
-import onh.plugins.commands.beaconother;
-import onh.plugins.commands.bitches;
-import onh.plugins.commands.info;
+import onh.plugins.commands.*;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.util.Objects;
 
@@ -19,6 +16,7 @@ public final class Plugins extends JavaPlugin {
         Objects.requireNonNull(this.getCommand("beacon")).setExecutor(new beacon());
         Objects.requireNonNull(this.getCommand("beaconother")).setExecutor(new beaconother());
         Objects.requireNonNull(this.getCommand("bitches")).setExecutor(new bitches());
+        Objects.requireNonNull(this.getCommand("launch")).setExecutor(new launch());
         getServer().getPluginManager().registerEvents(new singlesleep(), this);
     }
 

@@ -30,7 +30,7 @@ public class beaconother implements CommandExecutor {
             fw.setFireworkMeta(fwm);
             sender.sendMessage("Player " + target.getName() + " has been shown.");
         }
-        catch(CommandException e){
+        catch(Exception e){
             sender.sendMessage("Error running command, please try again");
             return false;
         }
